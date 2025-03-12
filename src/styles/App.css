@@ -1,0 +1,126 @@
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+  }
+  .app-container.light {
+    /* background-color: #f0f0f0; */
+    color: #000;
+  }
+  .app-container.dark {
+    /* background-color: #121212; */
+    color: #fff;
+  }
+  .card {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .dark .card {
+    background: #1e1e1e;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .theme-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .theme-toggle:hover {
+    transform: rotate(180deg);
+  }
+
+/* Light Mode Text Styles */
+.light {
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-accent: #2962ff;
+  --text-heading: #000000;
+}
+
+/* Dark Mode Text Styles */
+.dark {
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --text-accent: #82b1ff;
+  --text-heading: #ffffff;
+}
+
+/* Apply text styles */
+.card h1, .card h2, .card h3 {
+  color: var(--text-heading);
+  transition: color 0.3s ease;
+}
+
+.card p, .card li {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.tips-container,
+.protection-ways,
+.importance-section,
+.crack-time {
+  color: var(--text-primary);
+}
+
+.tips-container h2,
+.protection-ways h2,
+.importance-section h2,
+.crack-time h2 {
+  color: var(--text-heading);
+}
+
+a {
+  color: var(--text-accent);
+  transition: color 0.3s ease;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+@media (min-width: 800px) {
+  .card {
+    max-width: 800px;
+  }
+
+  .tips-container,
+  .protection-ways,
+  .importance-section {
+    width: 100%;
+    padding: 24px;
+    margin: 16px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tips-container h2,
+  .protection-ways h2,
+  .importance-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .tips-container p,
+  .protection-ways p,
+  .importance-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
